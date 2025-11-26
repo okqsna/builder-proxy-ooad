@@ -1,15 +1,27 @@
 import edu.ucu.task3.ProxyImage;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ProxyTest {
+    static class TestProxyImage extends ProxyImage {
+        public boolean displayCalled = false;
+        public TestProxyImage(String filename) {
+            super(filename);
+        }
+
+        @Override
+        public void display() {
+            displayCalled = true;
+        }
+    }
 
     @Test
-    void testProxyDisplayCanBeCalledTwice() {
-        ProxyImage proxy = new ProxyImage("dummy.png");
-
-        assertDoesNotThrow(proxy::display, "display() without error");
-        assertDoesNotThrow(proxy::display, "display() without error");
+    void testDisplayCalled() {
+        TestProxyImage proxy = new TestProxyImage("ooad.png");
+        assertFalse(proxy.displayCalled);
+        proxy.display();
+        assertTrue(proxy.displayCalled);
+        proxy.display();
+        assertTrue(proxy.displayCalled);
     }
 }
