@@ -1,0 +1,12 @@
+edu/ucu/task1/User$UserBuilder.class
+edu/ucu/task1/User.class
+edu/ucu/task2/Gender.class
+edu/ucu/task2/MailBox.class
+edu/ucu/task2/MailCode.class
+edu/ucu/task2/Client$ClientBuilder.class
+edu/ucu/task2/Strategy/MailGreeting.class
+edu/ucu/task2/MailInfo.class
+edu/ucu/task2/MailInfo$MailInfoBuilder.class
+edu/ucu/task1/Gender.class
+edu/ucu/task2/Client.class
+edu/ucu/task2/MailSender.class
