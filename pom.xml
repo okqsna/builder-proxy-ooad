@@ -68,6 +68,10 @@
             <configuration>
                 <useModulePath>false</useModulePath>
             </configuration>
+            <systemPropertyVariables>
+            <java.awt.headless>true</java.awt.headless>
+            
+            </systemPropertyVariables>
         </plugin>
         </plugins>
     </build>
